@@ -1,0 +1,64 @@
+name: Feature request
+description: Propose an improvement to a Mu Robotics project
+title: "[Feature]: "
+body:
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project area
+      options:
+        - HandUMI hardware
+        - HandUMI software
+        - HandUMI Quest app
+        - New robot or gripper support
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: use_case
+    attributes:
+      label: Use case
+      description: What task or workflow is currently difficult, and who benefits from solving it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed change
+      description: Describe the behavior, interface, hardware, or documentation you would like to add.
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: Note current workarounds or other approaches you evaluated.
+
+  - type: textarea
+    id: constraints
+    attributes:
+      label: Hardware and compatibility constraints
+      description: List relevant robots, grippers, headsets, sensors, operating systems, or dataset formats.
+
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to help implement this?
+      options:
+        - "Yes"
+        - "Maybe, with guidance"
+        - "No"
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission check
+      options:
+        - label: I searched existing issues and documentation for this request.
+          required: true

@@ -1,0 +1,78 @@
+name: Bug report
+description: Report a reproducible problem in a Mu Robotics project
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report a problem. Do not include credentials, private dataset content, participant information, or undisclosed security vulnerabilities.
+
+  - type: dropdown
+    id: project
+    attributes:
+      label: Project area
+      options:
+        - HandUMI hardware
+        - HandUMI software
+        - HandUMI Quest app
+        - Documentation
+        - Other
+    validations:
+      required: true
+
+  - type: input
+    id: revision
+    attributes:
+      label: Version or revision
+      description: Release, commit SHA, branch, or hardware revision where the problem occurs.
+      placeholder: main @ abc1234 / hardware rev 1
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: Environment
+      description: Relevant OS, Python or Unity version, headset, cameras, servos, robot, and connection method.
+      placeholder: Ubuntu 24.04, Python 3.12, PICO 4 Ultra over ADB, dual Feetech servos...
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the actual behavior and the behavior you expected.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction steps
+      description: Give the smallest reliable sequence that reproduces the problem.
+      placeholder: |
+        1. Run ...
+        2. Configure ...
+        3. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Logs or supporting evidence
+      description: Paste redacted logs, measurements, screenshots, or photos. Drag files here to attach them.
+      render: shell
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Pre-submission checks
+      options:
+        - label: I searched existing issues for this problem.
+          required: true
+        - label: I removed secrets, personal data, and private dataset content.
+          required: true
+        - label: This is not an undisclosed security vulnerability.
+          required: true

@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Plan a dataset pilot
+    url: https://murobotics.ai/
+    about: Talk with Mu Robotics about collecting task-specific manipulation data.
+  - name: Open-source support guide
+    url: https://github.com/murobotics-ai/.github/blob/main/SUPPORT.md
+    about: Find the right repository and support channel.
